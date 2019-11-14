@@ -11,9 +11,12 @@ namespace OdeToFood.Pages.Restaurants
 {
     public class DetailModel : PageModel
     {
-        public Restaurant Restaurant { get; set; }
         public IRestaurantData restaurantData { get; }
+        [TempData]
+        public string Message { get; set; } // This is property
 
+        public Restaurant Restaurant { get; set; }
+        
         public DetailModel(IRestaurantData restaurantData)
         {
             this.restaurantData = restaurantData;

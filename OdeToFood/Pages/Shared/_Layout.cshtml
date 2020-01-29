@@ -33,7 +33,7 @@
                     <li><a asp-page="/Index">Home</a></li>
                     <li><a asp-page="/About">About</a></li>
                     <li><a asp-page="/Contact">Contact</a></li>
-                    <li><a asp-page="/Restaurants/List">Restaurants</a></li>
+                    <li><a asp-page="/Restaurants/List">Restaurants</a></li
                 </ul>
             </div>
         </div>
@@ -45,8 +45,10 @@
         @RenderBody()
         <hr />
         <footer>
+            <vc:restaurant-count></vc:restaurant-count>
             @RenderSection("footer", required: false)
             <p>&copy; 2019 - OdeToFood</p>
+            <img src="/imp.jpg"
         </footer>
     </div>
 
